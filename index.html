@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/styles/global.css" />
+
+    <title>Frontend Mentor | Advice generator app</title>
+  </head>
+  <body>
+    <main class="wrapper">
+      <article class="card">
+        <div class="card-content">
+          <p class="advice-id">Advice #<span id="adviceId">000</span></p>
+          <h1 class="advice-text">"<span id="adviceText"></span>"</h1>
+          <img
+            src="assets/images/pattern-divider-desktop.svg"
+            class="seperator"
+            alt="Divider pattern"
+            aria-hidden="true"
+          />
+        </div>
+        <div class="actions">
+          <button
+            class="buttonDice"
+            onclick="fetchAdvice()"
+            aria-label="Generate new advice"
+          >
+            <img src="assets/images/icon-dice.svg" alt="Dice icon" />
+          </button>
+        </div>
+      </article>
+    </main>
+  </body>
+  <script src="assets/js/app.js"></script>
+</html>

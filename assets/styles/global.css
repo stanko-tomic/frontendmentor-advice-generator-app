@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  --primary-lightCyan: hsl(193, 38%, 86%);
+  --primary-neonGreen: hsl(150, 100%, 66%);
+
+  --neutral-grayishBlue: hsl(217, 19%, 38%);
+  --neutral-darkGrayishBlue: hsl(217, 19%, 24%);
+  --neutral-darkBlue: hsl(218, 23%, 16%);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--neutral-darkBlue);
+  color: var(--primary-lightCyan);
+  min-height: 100vh;
+  height: 700px;
+  position: relative;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  height: 100%;
+  padding-inline: 1rem;
+}
+
+.card {
+  background-color: var(--neutral-darkGrayishBlue);
+  border-radius: 0.8rem;
+  max-width: 34.75rem;
+}
+
+.card-content {
+  padding-inline: 3rem;
+  padding-block: 3.25rem;
+}
+
+.advice-id {
+  text-transform: uppercase;
+  color: var(--primary-neonGreen);
+  letter-spacing: 3pt;
+  font-size: 0.75rem;
+}
+
+.advice-text {
+  font-size: 1.75rem;
+  margin-top: 2.25rem;
+}
+
+.seperator {
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  width: 100%;
+}
+
+.actions {
+  position: relative;
+}
+
+.buttonDice {
+  position: absolute;
+  background-color: var(--primary-neonGreen);
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 100%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.buttonDice:hover {
+  box-shadow: 0 0 40px -2px var(--primary-neonGreen);
+}
+
+@media screen and (max-width: 40rem) {
+  .seperator {
+    content: url("../images/pattern-divider-mobile.svg");
+  }
+  .wrapper {
+    text-align: center;
+  }
+  .card-content {
+    padding-inline: 1.5rem;
+    padding-block: 2.75rem;
+  }
+
+  .advice-text {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+}
